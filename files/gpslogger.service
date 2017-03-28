@@ -1,0 +1,9 @@
+[Unit]
+After=chrony.service gpsd.service
+
+[Service]
+User=pirate
+ExecStart=/home/pirate/gpslog.sh
+
+[Install]
+WantedBy=default.target

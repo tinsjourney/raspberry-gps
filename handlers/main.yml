@@ -1,0 +1,18 @@
+---
+# handlers file for raspberry-gps
+- name: restart gpslogger
+  systemd:
+    name: gpslogger
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
+- name: restart chronyd
+  systemd:
+    name: chrony
+    state: restarted
+    enabled: yes 
+- name: restart gpsd
+  systemd:
+    name: gpsd
+    state: restarted
+    enabled: yes 
